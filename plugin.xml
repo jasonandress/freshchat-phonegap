@@ -47,8 +47,8 @@
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="application" mode="merge">
-                <provider
-                android:name="com.techaffinity.phonegap.plugins.FileProvider" android:authorities="${applicationId}.fileprovider" android:exported="false"
+            <provider
+                android:name="com.techaffinity.phonegap.plugins.FileProvider" android:authorities="${applicationId}.provider" android:exported="false"
                 android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
