@@ -304,7 +304,7 @@ public class freshchatPlugin extends CordovaPlugin {
                         Log.e(LOG_TAG,"Please provide parameters for initializing FreshChat");
                         return false;
                     }
-                    JSONObject jsonArgs = new JSONObject(args.getString(0));
+                    final JSONObject jsonArgs = new JSONObject(args.getString(0));
                     bundle = jsonToBundle(jsonArgs);
                     cordova.getThreadPool().execute( new Runnable() {
                        public void run() {
