@@ -308,7 +308,8 @@ public class freshchatPlugin extends CordovaPlugin {
                     bundle = jsonToBundle(jsonArgs);
                     cordova.getThreadPool().execute( new Runnable() {
                        public void run() {
-                            Freshchat.getInstance(cordovaContext).handleFcmMessage(cordovaContext,jsonArgs);
+                            Freshchat.getInstance(cordovaContext).handleGcmMessage(bundle);
+                            //Freshchat.getInstance(cordovaContext).handleFcmMessage(cordovaContext,jsonArgs);
                             callbackContext.success();
                        }
                     });
